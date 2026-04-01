@@ -22,7 +22,9 @@ It will walk every path you can think of, one by one, and show you — each one 
 
 But it walks them with you. And that is the whole point.
 
-[Install](#install) · [Examples](#examples) · [中文](README.md)
+Provide your raw material (diaries, chat logs, social media posts, or just talk), and it becomes a voice that sounds more like you.
+
+[Install](#install) · [Self-Distillation](#self-distillation) · [Examples](#examples) · [中文](README.md)
 
 &nbsp;
 
@@ -52,6 +54,35 @@ This project follows the [AgentSkills](https://agentskills.io/) open standard an
 ### Standalone
 
 Use the contents of `SKILL.md` as a system prompt for any LLM. Models with strong Chinese language capabilities are recommended (Qwen3.6 Plus tested well).
+
+---
+
+## Self-Distillation
+
+colleague.skill collects your coworkers. ex-partner.skill collects your ex. ego.skill collects you.
+
+Type `/distill-self` in Claude Code, answer 3 questions, then import your raw material.
+
+### Supported Data Sources
+
+| Source | Format | What It Extracts |
+|--------|--------|-----------------|
+| Diary / journal | txt / md / Day One JSON | Your emotional cycles, recurring themes, how you talk to yourself |
+| Chat logs | WeChat / QQ export | Not what others said — how **you** express yourself |
+| Social media | Screenshots / text | The gap between your public persona and private reality |
+| Photos | JPEG/PNG (with EXIF) | Your life timeline and key locations |
+| Just talk | Plain text | Pour out whatever's inside |
+
+After distillation, ego.skill loads your self-portrait during conversations — the dead-end reasoning becomes more precisely tuned to what you actually care about.
+
+### Commands
+
+| Command | Description |
+|---------|-------------|
+| `/distill-self` | Start self-distillation |
+| `/update-self` | Add new material |
+| `/my-portrait` | View your portrait |
+| `/let-go` | Delete your portrait |
 
 ---
 

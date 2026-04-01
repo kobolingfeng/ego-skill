@@ -23,7 +23,9 @@
 
 但它陪你看完了。这本身就是全部的意义。
 
-[安装](#安装) · [效果示例](#效果示例) · [English](README_EN.md)
+提供你的原材料（日记、聊天记录、朋友圈、口述），它会变成更像你自己的那个声音。
+
+[安装](#安装) · [自我蒸馏](#自我蒸馏) · [效果示例](#效果示例) · [English](README_EN.md)
 
 &nbsp;
 
@@ -53,6 +55,35 @@ git clone https://github.com/kobolingfeng/ego-skill ~/.claude/skills/ego-skill
 ### 直接使用
 
 把 `SKILL.md` 的内容当 system prompt 喂给任何大模型。推荐有较强中文能力的模型（实测 Qwen3.6 Plus 效果很好）。
+
+---
+
+## 自我蒸馏
+
+同事.skill 采集你的同事，前任.skill 采集你的前任，ego.skill 采集你自己。
+
+在 Claude Code 中输入 `/distill-self`，按提示回答 3 个问题，然后导入你的原材料。
+
+### 支持的数据来源
+
+| 来源 | 格式 | 提取什么 |
+|------|------|----------|
+| 日记/心情笔记 | txt / md / Day One JSON | 你的情绪周期、反复出现的主题、你和自己说话的方式 |
+| 聊天记录 | 微信/QQ 导出 | 不是看对方说什么，是看**你自己**怎么表达 |
+| 社交媒体 | 截图 / 文本 | 你的公开人设和私下状态之间的落差 |
+| 照片 | JPEG/PNG（含 EXIF） | 你的人生时间线和关键地点 |
+| 直接说 | 纯文本 | 把心里的东西倒出来就好 |
+
+蒸馏完成后，ego.skill 在和你对话时会自动加载你的自画像——推演会更精准地触及你真正在意的东西。
+
+### 管理命令
+
+| 命令 | 说明 |
+|------|------|
+| `/distill-self` | 开始自我蒸馏 |
+| `/update-self` | 追加新材料 |
+| `/my-portrait` | 查看自画像 |
+| `/let-go` | 删除自画像 |
 
 ---
 
@@ -140,6 +171,31 @@ ego.skill ❯ 我……不知道。如果我真的知道，
 
              人总归是要走的，努力也不是为了把什么东西留到永远，
              不过是在灯灭之前，偏要把手里的这点日子，焐热一点罢了。
+```
+
+---
+
+## 项目结构
+
+本项目遵循 [AgentSkills](https://agentskills.io) 开放标准：
+
+```
+ego-skill/
+├── SKILL.md                  # Skill 入口
+├── prompts/                  # Prompt 模板
+│   ├── intake.md             #   自我录入问题序列
+│   ├── self_analyzer.md      #   自我分析提取维度
+│   ├── portrait_builder.md   #   自画像生成模板
+│   └── merger.md             #   增量合并逻辑
+├── tools/                    # Python 工具
+│   ├── diary_parser.py       #   日记/心情笔记解析
+│   ├── chat_analyzer.py      #   聊天记录自我分析
+│   └── social_parser.py      #   社交媒体分析
+├── portraits/                # 生成的自画像（gitignored）
+├── docs/                     # 赞助二维码
+├── README.md
+├── README_EN.md
+└── LICENSE
 ```
 
 ---

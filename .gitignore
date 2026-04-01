@@ -4,5 +4,6 @@ __pycache__/
 test_*.txt
 test_*.py
 conv_err.txt
+portraits/
 .DS_Store
 Thumbs.db
