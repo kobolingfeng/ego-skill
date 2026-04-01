@@ -153,7 +153,19 @@ ego.skill ❯ 我……不知道。你问我努力有什么用……
 
 ## 致敬
 
-本项目的灵感来源于 [前任.skill](https://github.com/therealXiaomanChu/ex-skill)（by [therealXiaomanChu](https://github.com/therealXiaomanChu)）。前任.skill 首创了"把人蒸馏成 AI Skill"的概念，ego.skill 将这个方向从"模拟他人"转向了"面对自己"。
+灵感链：
+
+[同事.skill](https://github.com/titanwings/colleague-skill)（by [titanwings](https://github.com/titanwings)）首创了"把人蒸馏成 AI Skill"的双层架构（Work Skill + Persona）。
+
+↓
+
+[前任.skill](https://github.com/therealXiaomanChu/ex-skill)（by [therealXiaomanChu](https://github.com/therealXiaomanChu)）将场景从职场迁移到恋爱关系，实现了"把前任蒸馏成 AI"。
+
+↓
+
+**ego.skill** 将方向从"模拟他人"转向"面对自己"——不再蒸馏别人，而是蒸馏你自己内心那个已经走完所有路的部分。
+
+致敬两位原作者的创意和开源精神。
 
 本项目遵循 [AgentSkills](https://agentskills.io/) 开放标准，兼容 Claude Code 和 OpenClaw。
 

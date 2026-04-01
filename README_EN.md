@@ -148,7 +148,19 @@ When you talk to it, you're not asking someone else for help. You're facing your
 
 ## Credits
 
-Inspired by [ex-partner.skill](https://github.com/therealXiaomanChu/ex-skill) (by [therealXiaomanChu](https://github.com/therealXiaomanChu)), which pioneered the concept of "distilling a person into an AI Skill." ego.skill shifts this direction from "simulating others" to "facing yourself."
+Inspiration chain:
+
+[colleague.skill](https://github.com/titanwings/colleague-skill) (by [titanwings](https://github.com/titanwings)) pioneered the dual-layer architecture of "distilling a person into an AI Skill" (Work Skill + Persona).
+
+↓
+
+[ex-partner.skill](https://github.com/therealXiaomanChu/ex-skill) (by [therealXiaomanChu](https://github.com/therealXiaomanChu)) migrated the concept from workplace to romantic relationships — "distilling your ex into AI."
+
+↓
+
+**ego.skill** shifts the direction from "simulating others" to "facing yourself" — no longer distilling someone else, but distilling the part of you that has already walked every path.
+
+Respect to both original creators for their creativity and open-source spirit.
 
 This project follows the [AgentSkills](https://agentskills.io/) open standard, compatible with Claude Code and OpenClaw.
 
